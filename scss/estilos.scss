@@ -1,0 +1,263 @@
+/* CSS RESET */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* COLORES */
+$btnMenu: #69447c;
+$btnAgregar: #39804b;
+$btnRemover: #949494;
+$bgNav2: #d8bbd2;
+$bgTarj: #fafafa;
+
+/* GENERAL */
+h4, h5, h6, p {
+    color: $btnMenu;
+}
+
+h4, h5, .textoSeparado {
+    letter-spacing: .1rem;
+}
+
+p {
+    font-size: .9rem;
+    letter-spacing: .1rem;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    background: radial-gradient(ellipse at bottom, #8d8cd2, transparent),
+                radial-gradient(ellipse at top, #d09ece, transparent);
+}
+
+.nav1 {
+    background-color: #d7c9df;
+    z-index: 1;
+}
+
+.footer {
+    background-color: $bgNav2;
+    z-index: 1;
+}
+
+.nav2 {
+    background-color: $bgNav2;
+    padding-top: 68px!important;
+}
+
+.navbar-collapse.collapsing,
+.navbar-collapse.show {
+    padding-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tarjProd, .presupuesto, .swal2-popup.swal2-modal.swal2-show, .swal2-popup.swal2-toast.swal2-show {
+    color: $btnMenu;
+    border-color: $bgNav2;
+    background-color: $bgTarj;
+    border-radius: 1.5rem;
+    box-shadow: .2rem .2rem .2rem #35353548;
+}
+
+.contGenProd {
+    padding: 1rem 1rem 0 1rem!important;
+}
+
+.presupuesto {
+    margin-bottom: 1rem;
+}
+
+.numProd {
+    position: absolute;
+    margin-left: .9rem!important;
+    font-size: .8rem;
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    margin: 0;
+    background-color: $bgTarj;
+    background-blend-mode: luminosity;
+    border-radius: 100%;
+}
+
+.contCart {
+    &:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    };
+}
+
+.contImgTarj {
+    border-radius: 50%;
+    height: 12rem;
+    width: 12rem;
+    background: radial-gradient(closest-side, darken($bgNav2, 20%), lighten($bgNav2, 15%));
+    object-fit: cover;
+    &:hover {
+        transform: scale(1.25);
+        transition: transform 200ms ease-in-out;
+    }
+}
+
+.contPortada {
+    position: absolute;
+    right: 11rem;
+    top: 5rem;
+    height: 22rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.imgPortadaLogo {
+    z-index: 1;
+    height: 7rem;
+    width: auto;
+    -webkit-filter: drop-shadow(3px 3px 2px #18181880);
+}
+
+.imgPortadaMod {
+    position: absolute;
+    left: 4rem;
+    bottom: 0;
+    height: 80%;
+    width: auto;
+    -webkit-filter: drop-shadow(5px 5px 15px #ffffff);
+}
+
+.contPortadaCrema {
+    position: relative;
+    height: 4rem;
+    width: 26rem;
+    background-color: $bgNav2;
+    border-radius: 20rem;
+}
+
+.bloqueColor {
+    width: 30%;
+    height: 100vh;
+    background-color: $bgNav2;
+}
+
+.imgPortadaCrema {
+    position: absolute;
+    right: 1rem;
+    top: -2rem;
+    height: auto;
+    width: 7rem;
+    transform: rotate(-20deg) scale(1.2);
+    -webkit-filter: drop-shadow(3px 3px 2px #1818184a);
+    &:hover {
+        transform: rotate(-20deg) scale(1.5);
+        transition: transform 200ms ease-in-out;
+        cursor: pointer;
+    }
+}
+
+.imgTarj {
+    -webkit-filter: drop-shadow(5px 5px 2px #18181880);
+}
+
+.btn {
+    background-color: $btnMenu;
+    color: white;
+    border: 0!important;
+    border-radius: 5rem;
+    font-size: .8rem;
+    &Menu, &ContCompra, &Checkout, &Comprar {
+        &:hover, &:focus {
+            cursor: pointer;
+            background-color: lighten($btnMenu, 10%);
+        }
+    };
+    &Menu, &Checkout {
+        letter-spacing: .1rem;
+    }
+    &Add {
+        background-color: darken($bgNav2, 20%);
+        font-size: 1rem;
+        color: white;
+        &:hover, &:focus {
+            background-color: $btnAgregar;
+        }
+    };
+    &Remover {
+        background-color: $btnRemover;
+        text-align: center;
+        font-size: 1rem;
+        color: white;
+        &Carr {
+            font-size: 1rem;
+        }
+    }
+    &MasTam {
+        font-size: 1rem;
+    }
+}
+
+.swal2-confirm.swal2-styled {
+    border: 0!important;
+    border-radius: 5rem!important;
+    background-color: $btnRemover!important;
+    text-align: center!important;
+    font-size: 1rem!important;
+    font-weight: normal!important;
+    color: white!important;
+}
+
+.swal2-cancel.swal2-styled {
+    border: 0!important;
+    border-radius: 5rem!important;
+    background-color: $btnMenu!important;
+    text-align: center!important;
+    font-size: 1rem!important;
+    font-weight: bold!important;
+    color: white!important;
+}
+
+.nombreProducto, .finCarrito {
+    background-color: lighten($bgNav2, 15%);
+}
+
+.bi-house-fill, .bi-book-fill, .bi-cart-fill {
+    font-size: 1.5rem;
+    color: $btnMenu;
+    padding: 0;
+    &:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    };
+}
+
+.bi-dash-circle, .bi-plus-circle {
+    font-size: .8rem;
+}
+
+.bi-check-circle-fill {
+    color: green;
+    font-size: 2rem;
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    padding: 0!important;
+    margin: 0!important;
+    opacity: .5;
+    animation: pop 0.2s linear 1;
+}
+
+@keyframes pop{
+    50%  {transform: scale(1.2);}
+}
+
+.separador {
+    color: $bgNav2;
+    font-size: 1.8rem;
+}
