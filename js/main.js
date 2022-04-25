@@ -3,12 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     btnCrema.addEventListener('click', muestraShop);
     btnHome.addEventListener('click', muestraPortada);
     productos.addEventListener('click', addRemover); //Acción cuando hacen click en botón "Agregar" o "Remover" de las tarjetas
-    navMenu.addEventListener("click", e => { filtroMenu(e); miCarritoOut(); });
+    navMenu.addEventListener('click', e => { filtroMenu(e); miCarritoOut(); });
     btnCart.addEventListener('click', miCarritoIn);
     vuelveCompra.addEventListener('click', e => { seleccionCat('Todas'); miCarritoOut(); });
     tabla.addEventListener('click', addRemoverItemTabla); //Acción cuando hacen click en botón "Agregar" o "Remover" del carrito
     vacCarro.addEventListener('click', notificaCarroVacio); //Acción cuando hacen click en botón "Vaciar lista"
     buscar.addEventListener('keyup', busqueda);
+    btnCheckout.addEventListener('click', )
 });
 
 window.onload = muestraPortada();
@@ -19,7 +20,6 @@ async function cargarJSON() {
         .then((response) => response.json())
         .then(function(baseDatos) {
             listaProd = baseDatos.listaProd;
-            envios = baseDatos.envios;
             seleccionTodo();
         });
 }

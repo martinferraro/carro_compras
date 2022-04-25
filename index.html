@@ -96,12 +96,57 @@
                         <!-- BOTONES CHECKOUT O VACIAR CARRITO -->
                         <div class="d-flex justify-content-center col-12 mt-2">
                             <button id="btnTabla" class="btnRemover btnMasTam textoSeparado btn btn-secondary align-items-center me-2">Vaciar<i class="bi-trash3 ms-2"></i></button>
-                            <button id="comprar" class="btnCheckout btnMasTam btn btn-secondary align-items-center fw-bold">Checkout<i class="bi bi-cart-check ms-2"></i></button>
+                            <button id="btnCheckout" class="btnCheckout btnMasTam btn btn-secondary align-items-center fw-bold" data-bs-toggle="modal" data-bs-target="#modalCheckout">Checkout<i class="bi bi-cart-check ms-2"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
+    </div>
+
+    <!-- FORMULARIO MODAL CHECKOUT -->
+    <div class="modal fade" id="modalCheckout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Formulario checkout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <fieldset>
+                        <form class="formulario">
+                            <!-- DATOS FORMULARIO -->
+                            <div>
+                                <div>
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingresa tu nombre" required>
+                                </div>
+                                <div class="mt-1">
+                                    <label for="apellido">Apellido</label>
+                                    <input type="text" id="apellido" name="apellido" class="form-control" placeholder="Ingresa tu apellido" required>
+                                </div>
+                                <div class="row mt-1">
+                                    <div class="form__email container col-lg-6">
+                                        <label for="email">@ email</label>
+                                        <input type="email" id="email" name="email" class="form-control" placeholder="Ingresa tu email" required>
+                                    </div>
+                                    <div class="form__telefono container col-lg-6">
+                                        <label for="telefono">Teléfono de contacto</label>
+                                        <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="Teléfono" required>
+                                    </div>
+                                </div>
+                                <!-- BOTONES -->
+                                <div class="modal-footer d-flex justify-content-center mt-4 p-0 pt-3">
+                                    <input class="btn btn-secondary btnRemover" type="button" data-bs-dismiss="modal" value="Cerrar">
+                                    <input class="btn btn-secondary btnRemover" type="reset" value="Borrar formulario">
+                                    <input class="btn btn-primary btnAdd" type="submit" value="Enviar formulario">
+                                </div>
+                            </div>
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- TEMPLATE TARJETA DEL PRODUCTO -->

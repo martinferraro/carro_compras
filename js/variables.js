@@ -18,6 +18,8 @@ const
     sumaProd = document.getElementById('sumaProd'),
     sumaProd2 = document.getElementById('sumaProd2'),
     navMenu = document.getElementById('navMenu'),
+    btnCheckout = document.getElementById('btnCheckout'),
+    modalCheckout = document.getElementById('modalCheckout'),
     fragment = document.createDocumentFragment(), //Nodo offscreen para ir cargando las tarjetas
     Toast = Swal.mixin({
         toast: true,
